@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-deploy
+  labels:
+    app: flask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask
+  template:
+    metadata:
+      app: flask
+    containers:
+      - image: lyzhang1999/hello-world-flask:latest
+        name: hello-world-flask
+    
