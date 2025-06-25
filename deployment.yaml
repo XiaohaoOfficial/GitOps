@@ -11,8 +11,10 @@ spec:
       app: flask
   template:
     metadata:
-      app: flask
-    containers:
+      labels:
+        app: flask
+    spec: 
+      containers:
       - image: lyzhang1999/hello-world-flask:latest
         name: hello-world-flask
     
